@@ -1,0 +1,13 @@
+config:
+    target: "http://localhost:5000/"
+    variables:
+      clientId: "client-id"
+      secret: "secret"
+    phases:
+      - duration: 5
+        arrivalRate: 1
+    processor: "./index.js"
+scenarios:
+  - name: "Payments slot booking"
+    flow:
+      - function: "testCase01"
